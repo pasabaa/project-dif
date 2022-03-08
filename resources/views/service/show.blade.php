@@ -36,8 +36,8 @@
                         <p class="fw-bolder">Nombre de la imagen: <span class="fw-normal">{{$service->url}}</span></p>
                         <p class="fw-bolder">ID de la modalidad: <span class="fw-normal">{{$service->id_modality}}</span></p>
                         <p class="fw-bolder">ID del tipo: <span class="fw-normal">{{$service->id_type}}</span></p>
-                        <p class="fw-bolder">Creación: <span class="fw-normal">{{date('l, j F Y - h:i A', strtotime($service->created_at));}}</span></p>
-                        <p class="fw-bolder">Última actualización: <span class="fw-normal">{{date('l, j F Y - h:i A', strtotime($service->updated_at));}}</span></p>
+                        <p class="fw-bolder">Creación: <span class="fw-normal">{{$service->created_at->translatedFormat('l, j \\de F \\de Y - h:i A');}}</span></p>
+                        <p class="fw-bolder">Última actualización: <span class="fw-normal">{{$service->updated_at->translatedFormat('l, j \\de F \\de Y - h:i A');}}</span></p>
                     </div>
                 </div>
             </div>

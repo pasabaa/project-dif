@@ -35,7 +35,7 @@
                     <div class="card border-0">
                         <div class="card-body text-justify">
                             <h1 class="card-title">{{$notice->title}}</h1>
-                            <p class="text-muted my-2 fs-sm">{{$notice->created_at->translatedFormat('l, j \\de F Y');}}
+                            <p class="text-muted my-2 fs-sm">{{$notice->created_at->translatedFormat('l, j \\de F \\de Y');}}
                             </p>
                             <p class="text-muted my-2-0 fs-sm">{{$notice->created_at->diffForHumans();}}</p>
                             <span class="badge bg-dark">{{Str::title($notice->category->categorie)}}</span>

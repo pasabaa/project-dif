@@ -25,8 +25,8 @@
                     </div>
                     <div class="card-body">
                         <p class="fw-bolder">ID del resposable: <span class="fw-normal">{{$responsableFamily->id}}</span></p>
-                        <p class="fw-bolder">Creación: <span class="fw-normal">{{date('l, j F Y - h:i A', strtotime($responsableFamily->created_at));}}</span></p>
-                        <p class="fw-bolder">Última actualización: <span class="fw-normal">{{date('l, j F Y - h:i A', strtotime($responsableFamily->updated_at));}}</span></p>
+                        <p class="fw-bolder">Creación: <span class="fw-normal">{{$responsableFamily->created_at->translatedFormat('l, j \\de F \\de Y - h:i A');}}</span></p>
+                        <p class="fw-bolder">Última actualización: <span class="fw-normal">{{$responsableFamily->updated_at->translatedFormat('l, j \\de F \\de Y - h:i A');}}</span></p>
                     </div>
                 </div>
             </div>

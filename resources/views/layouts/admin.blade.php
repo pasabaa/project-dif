@@ -31,7 +31,7 @@
     <div class="container-fluid m-0 p-0">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark p-4">
             <div class="container">
-                <a class="navbar-brand fw-bolder" href="{{ url('/') }}">
+                <a class="navbar-brand fw-bolder" href="{{ url('/home') }}">
                     Panel de Control
                 </a>
                 <button class="navbar-toggler border-0 ms-auto" type="button" data-bs-toggle="collapse"

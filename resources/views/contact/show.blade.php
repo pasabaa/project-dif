@@ -27,7 +27,7 @@
                     </div>
                     <div class="card-body">
                         <p class="fw-bolder">ID de la modalidad: <span class="fw-normal">{{$contact->id}}</span></p>
-                        <p class="fw-bolder">Enviado: <span class="fw-normal">{{date('l, j F Y - h:i A', strtotime($contact->created_at));}}</span></p>
+                        <p class="fw-bolder">Enviado: <span class="fw-normal">{{$contact->created_at->translatedFormat('l, j \\de F \\de Y');}}</span></p>
                     </div>
                 </div>
             </div>

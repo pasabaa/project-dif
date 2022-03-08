@@ -33,8 +33,8 @@
                         <p class="fw-bolder">ID de la noticia: <span class="fw-normal">{{$notice->id}}</span></p>
                         <p class="fw-bolder">Nombre de la imagen: <span class="fw-normal">{{$notice->url}}</span></p>
                         <p class="fw-bolder">ID de la categoria: <span class="fw-normal">{{$notice->id_categorie}}</span></p>
-                        <p class="fw-bolder">Creación: <span class="fw-normal">{{date('l, j F Y - h:i A', strtotime($notice->created_at));}}</span></p>
-                        <p class="fw-bolder">Última actualización: <span class="fw-normal">{{date('l, j F Y - h:i A', strtotime($notice->updated_at));}}</span></p>
+                        <p class="fw-bolder">Creación: <span class="fw-normal">{{$notice->created_at->translatedFormat('l, j \\de F \\de Y - h:i A');}}</span></p>
+                        <p class="fw-bolder">Última actualización: <span class="fw-normal">{{$notice->updated_at->translatedFormat('l, j \\de F \\de Y - h:i A');}}</span></p>
                     </div>
                 </div>
             </div>
