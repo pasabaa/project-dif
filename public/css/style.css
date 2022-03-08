@@ -1,0 +1,94 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --gray-light: #fcfcfc;
+    --gray-dark: #212529;
+    --dark: #5c5c5c;
+    --active: #f8f9fa;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--gray-light);
+    color: var(--dark);
+}
+
+/*BUTTONS AND LINKS*/
+
+.btn:focus,
+.btn-close:focus {
+    box-shadow: none !important;
+    border: none;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+    border: none;
+}
+
+/*TEXT*/
+
+.text-justify {
+    text-align: justify;
+}
+
+/*PAGINATION*/
+
+.page-item .page-link {
+    border: none;
+    color: var(--gray-light);
+    background: var(--gray-dark);
+}
+
+.page-item.active .page-link {
+    border: none;
+    background: var(--active);
+    color: var(--gray-dark);
+}
+
+.page-link:focus {
+    box-shadow: none;
+}
+
+/*MEDIA*/
+
+.h-max {
+    max-height: 100% !important;
+}
+
+.img-card {
+    height: 100%;
+    width: auto;
+}
+
+.node::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    min-height: 18rem;
+    width: 4px;
+    background-color: rgb(34, 34, 34);
+    left: 50%;
+    bottom: -18rem;
+    margin: auto;
+}
+
+.node-up::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    min-height: 18rem;
+    width: 4px;
+    background-color: rgb(34, 34, 34);
+    left: 50%;
+    top: -18rem;
+    margin: auto;
+}
+
+/*BACKGROUNDS*/
+
+.bg-dark-overlay {
+    background: rgb(33, 37, 41);
+    background: linear-gradient(0deg, rgba(33, 37, 41, 1) 0%, rgba(33, 37, 41, 1) 25%, rgba(33, 37, 41, 0.8015581232492998) 50%, rgba(33, 37, 41, 0.39539565826330536) 75%, rgba(33, 37, 41, 0) 100%);
+}
