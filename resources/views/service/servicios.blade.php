@@ -8,7 +8,7 @@
     <div class="col-lg-4 col-12 mt-2">
         <div class="card border-0 h-100 h-max bg-white">
             <img class="img-card img-fluid" src="uploads/services/{{$service->url}}" alt="">
-            <div class="card-body card-img-overlay bg-dark-overlay text-white align-items-end justify-content-between d-flex flex-column">
+            <div class="card-body card-img-overlay bg-dark-overlay text-white align-items-start justify-content-between d-flex flex-column">
                 <div class="d-flex me-auto gap-2">
                     <span class="badge bg-dark me-auto">{{Str::title($service->modality->modality)}}</span>
                     <span class="badge bg-dark me-auto">{{Str::title($service->type->type)}}</span>

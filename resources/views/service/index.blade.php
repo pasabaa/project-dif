@@ -36,11 +36,10 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Nombre</th>
-                                <th>Área</th>
-                                <th>Descripción</th>
-                                <th class="text-center">Tipo</th>
-                                <th class="text-center">Modalidad</th>
-                                <th class="text-center">Imagen</th>
+                                <th class="">Área</th>
+                                <th class="text-center ">Tipo</th>
+                                <th class="text-center ">Modalidad</th>
+                                <th class="text-center d-none d-sm-block">Imagen</th>
                                 <th class="text-center">Acciones</th>
                             </tr>
                         </thead>
@@ -50,11 +49,10 @@
                                 <td>{{ ++$i }}</td>
 
                                 <td>{{ $service->name }}</td>
-                                <td>{{ $service->area }}</td>
-                                <td>{!!nl2br((Str::limit($service->description, 100)))!!}</td>
+                                <td class="">{{ $service->area }}</td>
                                 <td class="text-center">{{ $service->type->type}}</td>
                                 <td class="text-center">{{ $service->modality->modality }}</td>
-                                <td class="text-center"><img class="img-fluid" width="200"
+                                <td class="text-center d-none d-sm-block"><img class="img-fluid" width="200"
                                         src="uploads/services/{{$service->url}}" alt=""></td>
                                 <td>
                                     <div class="d-flex justify-content-around align-items-center gap-2">

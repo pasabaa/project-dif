@@ -8,7 +8,7 @@
     <div class="col-lg-4 col-12 mt-2">
         <div class="card border-0 h-100 h-max bg-white">
             <img class="img-card img-fluid" src="uploads/notices/{{$notice->url}}" alt="">
-            <div class="card-body card-img-overlay bg-dark-overlay text-white align-items-end justify-content-between d-flex flex-column">
+            <div class="card-body card-img-overlay bg-dark-overlay text-white align-items-start justify-content-between d-flex flex-column">
                 <span class="badge bg-dark me-auto">{{Str::title($notice->category->categorie)}}</span>
                 <div class="text-normal">
                     <div class="d-flex justify-content-between mb-2">
