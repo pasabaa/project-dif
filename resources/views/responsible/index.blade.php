@@ -9,28 +9,16 @@
         </div>
     </div>
 </div>
-
+@if (($responsibles->isEmpty()))
+<div class="row mt-4 pt-4">
+    <div class="col-12 text-center mt-4 pt-4">
+        <h1>No hay información disponible.</h1>
+    </div>
+</div>
+@else
 <div class="row">
     <div class="col-sm-12 p-4">
-        <div class="card">
-            <div class="card-header">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <a class="btn btn-outline-success btn-sm" href="{{ url()->previous() }}"><i
-                            class="bi bi-arrow-left-square-fill"></i> Regresar </a>
-
-                    <span id="card_title" class="h4 fw-bolder">
-                        {{ __('Responsables') }}
-                    </span>
-
-                    <div class="float-right">
-                        <a href="{{ route('responsibles.create') }}" class="btn btn-outline-success btn-sm float-right"
-                            data-placement="left">
-                            <i class="bi bi-people-fill"></i>
-                            {{ __('Crear Nuevo Responsable') }}
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="card border-0">
             @if ($message = Session::get('success'))
             <div class="alert alert-success">
                 <p>{{ $message }}</p>
@@ -39,7 +27,7 @@
 
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-striped table-hover">
+                    <table class="table table-borderless table-hover">
                         <thead class="thead">
                             <tr>
                                 <th>No</th>
@@ -47,10 +35,9 @@
                                 <th>Nombre</th>
                                 <th>Cargo</th>
                                 <th>Área</th>
-                                <th>Fecha de Asignación</th>
+                                <th>Asignación</th>
                                 <th>Imagen</th>
-
-                                <th></th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -62,22 +49,22 @@
                                 <td>{{ $responsible->charge }}</td>
                                 <td>{{ $responsible->area }}</td>
                                 <td>{{ $responsible->date_charge }}</td>
-                                <td><img class="img-fluid" width="200" src="uploads/responsibles/{{$responsible->url }}"
+                                <td><img class="img-fluid" width="150" src="uploads/responsibles/{{$responsible->url }}"
                                         alt=""></td>
 
                                 <td>
-                                    <div class="d-flex flex-column gap-2 justify-content-center align-items-center">
-                                        <a class="btn btn-outline-dark btn-sm"
+                                    <div class="d-flex justify-content-around align-items-center gap-2">
+                                        <a class="btn btn-sm btn-light"
                                             href="{{ route('responsibles.show',$responsible->id) }}"><i
-                                                class="bi bi-eye-fill"></i> </a>
-                                        <a class="btn btn-outline-warning btn-sm"
+                                                class="bi bi-eye-fill fs-6"></i> </a>
+                                        <a class="btn btn-sm btn-dark"
                                             href="{{ route('responsibles.edit',$responsible->id) }}"><i
-                                                class="bi bi-pen-fill"></i> </a>
+                                                class="bi bi-pencil-fill fs-6"></i> </a>
 
                                         <button title="Eliminar" data-bs-toggle="modal"
                                             data-bs-target="#modal-delete-{{$responsible->id}}" type="submit"
-                                            class="btn btn-outline-danger btn-sm"><i
-                                                class="bi bi-trash3-fill"></i></button>
+                                            class="btn btn-danger btn-sm"><i
+                                                class="bi bi-trash-fill fs-6"></i></button>
                                     </div>
 
                                 </td>
@@ -115,5 +102,5 @@
         {!! $responsibles->links() !!}
     </div>
 </div>
-
+@endif
 @endsection

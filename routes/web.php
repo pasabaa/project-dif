@@ -18,7 +18,7 @@ use Illuminate\Http\Request;
 
 Route::get('/', function () {
     $title = 'Inicio - DIF Acámbaro';
-    $notices = Notice::latest()->take(5)->get();;
+    $notices = Notice::latest()->take(3)->get();;
     return view('welcome', compact('title', 'notices'));
 });
 

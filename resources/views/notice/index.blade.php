@@ -59,7 +59,7 @@
                                 <td>
                                     <div class="d-flex justify-content-around align-items-center gap-2">
                                         @can('notices.show')
-                                        <a title="Ver" class="btn btn-sm btn-light "
+                                        <a title="Ver" class="btn btn-sm btn-light"
                                             href="{{ route('notices.show',$notice->id) }}"><i
                                                 class="bi bi-eye-fill fs-6"></i></a>
                                         @endcan

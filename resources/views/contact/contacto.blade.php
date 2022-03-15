@@ -3,7 +3,7 @@
 @section('content')
 <div class="row justify-content-between p-4 mt-4">
     <h1 class="display-4">Contacto</h1>
-    <p>En esta sección se presenta información de contacto del Sistema de Desarrollo Integral de la Familia del
+    <p>En esta sección se presenta información de contacto del Sistema para el Desarrollo Integral de la Familia del
         municipio de Acámbaro.</p>
     <div class="col-lg-4 col-12">
         @if ($message = Session::get('success'))

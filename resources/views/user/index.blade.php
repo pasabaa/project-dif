@@ -60,7 +60,7 @@ User
                                 <td>{{ $user->email }}</td>
                                 <td>{{date('l j F Y H:i:s', strtotime($user->created_at));}}</td>
                                 <td>
-                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <div class="d-flex justify-content-start align-items-center gap-2">
                                         @can('users.show')
                                         <a title="Ver" class="btn btn-sm btn-light "
                                             href="{{ route('users.show',$user->id) }}"><i
@@ -71,11 +71,13 @@ User
                                             href="{{ route('users.edit',$user->id) }}"><i
                                                 class="bi bi-pencil-fill fs-6"></i></a>
                                         @endcan
+                                        @if($user->id != '1')
                                         @can('users.destroy')
                                         <button title="Eliminar" data-bs-toggle="modal"
                                             data-bs-target="#modal-delete-{{$user->id}}" user="submit"
                                             class="btn btn-danger btn-sm"><i class="bi bi-trash-fill fs-6"></i></button>
                                         @endcan
+                                        @endif
                                     </div>
                                 </td>
 

@@ -5,49 +5,55 @@
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header d-flex align-items-center">
-                        <div class="float-right">
-                            <a class="btn btn-outline-success btn-sm float-right"  href="{{ route('responsibles.index') }}"><i class="bi bi-arrow-left-square-fill"></i> Regresar </a>
-                        </div>
-                        <div class="float text-center ms-auto">
-                            <span class="card-title h4 fw-bolder"> <i class="bi bi-eye-fill"></i> Mostrar Responsable</span>
-                        </div>
+<section class="container-fluid mb-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-12">
+            <div class="card mt-4 border-0">
+                <div class="card-header border-0 bg-white">
+                    <div class="d-flex justify-content-between">
+                        <h1 class="fw-bolder">Responsable</h1>
+                        <button title="Más información" class="btn p-0 h-25 info"><i class="bi bi-info-circle-fill"></i></button>
                     </div>
+                    <h4 class="fw-light">{{$responsible->name}}</h4>
+                </div>
 
-                    <div class="card-body">
-                        
-                        <div class="form-group">
-                            <strong>Nombre:</strong>
-                            {{ $responsible->name }}
-                        </div>
-                        <div class="form-group mt-4">
-                            <strong>Cargo:</strong>
-                            {{ $responsible->charge }}
-                        </div>
-                        <div class="form-group mt-4">
-                            <strong>Área:</strong>
-                            {{ $responsible->area }}
-                        </div>
-                        <div class="form-group mt-4">
-                            <strong>Fecha de Asignación:</strong>
-                            {{ $responsible->date_charge }}
-                        </div>
-                        <div class="form-group mt-4">
-                            <strong>Descripción:</strong>
-                            {!! nl2br($responsible->description)!!}
-                        </div>
-                        <div class="form-group d-flex flex-column mt-4">
-                            <strong>Imagen:</strong>
-                            <img class="img-fluid" width="200" src="{{asset('uploads/responsibles/')}}{{'/'.$responsible->url}}" alt="">
-                        </div>
-
+                <div class="card-body">
+                    <div class="text-center my-4">
+                        <img class="img-fluid" src="{{asset('uploads/responsibles/')}}{{'/'.$responsible->url}}" alt="">
                     </div>
+                    <p class="fw-bolder">Cargo: <span class="fw-normal">{{$responsible->charge}}</span></p>
+                    <p class="fw-bolder">Área: <span class="fw-normal">{{$responsible->area}}</span></p>
+                    <p class="fw-bolder">Fecha de asignación: <span class="fw-normal">{{$responsible->date_charge }}</span></p>
+                    <p class="fw-bolder">Descripción:</p>
+                    <p>{!!nl2br($responsible->description)!!}</p>
+                    <a title="Regresar" class="btn btn-sm btn-dark mt-4" href="{{route('responsibles.index')}}">Regresar</a>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="col-lg-4 col-12 more-info d-none">
+            <div class="card mt-4 border-0 bg-gray-light">
+                <div class="card-header border-0 bg-gray-light">
+                    <h4 class="fw-bolder">Más información</h4>
+                </div>
+                <div class="card-body">
+                    <p class="fw-bolder">ID de la noticia: <span class="fw-normal">{{$responsible->id}}</span></p>
+                    <p class="fw-bolder">Nombre de la imagen: <span class="fw-normal">{{$responsible->url}}</span></p>
+                    <p class="fw-bolder">ID de la categoria: <span class="fw-normal">{{$responsible->id_categorie}}</span></p>
+                    <p class="fw-bolder">Creación: <span class="fw-normal">{{$responsible->created_at->translatedFormat('l, j \\de F \\de Y - h:i A');}}</span></p>
+                    <p class="fw-bolder">Última actualización: <span class="fw-normal">{{$responsible->updated_at->translatedFormat('l, j \\de F \\de Y - h:i A');}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    let btnInfo = document.querySelector('.info');
+    let content = document.querySelector('.more-info');
+
+    btnInfo.addEventListener('click', () => {
+        content.classList.toggle('d-none');
+    });
+
+</script>
 @endsection

@@ -1,6 +1,3 @@
-<div class="box box-info padding-1">
-    <div class="box-body">
-        
         <div class="form-group">
             {{ Form::label('Nombre') }}
             {{ Form::text('name', $responsible->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
@@ -53,12 +50,14 @@
                 </div>
                 @endif
         </div>
-
     </div> 
-    <div class="mt-4 text-center">
-        <button type="submit" class="btn btn-primary"> <i class="bi bi-check-circle-fill"></i> Guardar Cambios</button>
+    <div class="form-group mt-4">
+        <div class="d-flex gap-4">
+            <a class="btn btn-sm btn-light" href="{{route('responsibles.index')}}">Regresar</a>
+            <button type="submit" class="btn btn-sm btn-dark">Guardar</button>
+        </div>
     </div>
-</div>
+
 <script>
     $('.summernote').summernote({
       tabsize: 2,

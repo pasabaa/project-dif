@@ -47,7 +47,6 @@
                             @foreach ($services as $service)
                             <tr>
                                 <td>{{ ++$i }}</td>
-
                                 <td>{{ $service->name }}</td>
                                 <td class="">{{ $service->area }}</td>
                                 <td class="text-center">{{ $service->type->type}}</td>
