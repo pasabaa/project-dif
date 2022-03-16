@@ -2,8 +2,14 @@
 @section('content')
 <div class="row justify-content-between p-4 mt-4">
     <h1 class="display-4">Servicios</h1>
-    <p class="text-justify">En esta sección se presentan los servicios que se ofrecen en el Sistema para el Desarrollo Integral de la Familia
-        del municipio de Acámbaro.</p>
+    <p class="text-justify">
+        Favorecer el desarrollo de vínculos humanos saludables y fomentar cambios sociales que deriven en un mayor
+        bienestar para las personas.
+        La aplicación efectiva, humana y profesional de la cédula socioeconómica para conocer a fondo el entorno
+        económico,
+        familiar, médico y laboral del solicitante, a fin de identificar las necesidades y el nivel de
+        vulnerabilidad del
+        usuario. Así mismo canalizar y gestionar a las diferentes instituciones de asistencia social.</p>
     @foreach ($services as $service)
     <div class="col-lg-4 col-12 mt-2">
         <div class="card border-0 h-100 h-max bg-white">
