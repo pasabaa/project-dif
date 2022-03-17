@@ -6,7 +6,7 @@
         <h1>Categorias de noticias</h1>
         <div class="d-flex gap-4">
             <a class="btn btn-sm btn-light" href="{{url()->previous()}}">Regresar</a>
-            <a href="{{ route('categories.create') }}" class="btn btn-dark btn-sm">Crear nueva noticia</a>
+            <a href="{{ route('categories.create') }}" class="btn btn-dark btn-sm">Crear nueva categoria</a>
         </div>
     </div>
 </div>

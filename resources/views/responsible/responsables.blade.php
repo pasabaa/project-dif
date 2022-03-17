@@ -15,7 +15,7 @@
 <div class="row justify-content-center p-4 h-100">
     @foreach($responsibles as $responsible)
 
-    @if ($responsible->charge === "Presidente del SMDIF")
+    @if ($responsible->charge === "PRESIDENTE DEL SMDIF")
     <div class="col-10">
         <div class="card my-2 p-4 node border-4 border-dark">
             <div class="text-center">
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-    @elseif($responsible->charge === "Director General del SMDIF")
+    @elseif($responsible->charge === "DIRECTOR GENERAL DEL SMDIF")
     <div class="col-10">
         <div class="card my-2 p-4 node-up border-3 border-dark">
             <div class="text-center">
@@ -91,7 +91,7 @@
                     alt="{{$responsible->name}}">
             </div>
             <h3 class="card-title fw-bolder text-center">{{$responsible->name}}</h3>
-                <h4 class="card-text text-center">{{date('l j F Y', strtotime($responsible->date_charge));}}</h4>
+                <h4 class="card-text text-center">{{$responsible->date_charge}}</h4>
                 <p class="card-text text-center fw-bolder">{{$responsible->area}}</p>
             <p class="card-text text-justify">{!! nl2br($responsible->description)!!}</p>
         </div>
