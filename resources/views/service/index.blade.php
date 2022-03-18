@@ -36,9 +36,9 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Nombre</th>
-                                <th class="">Área</th>
-                                <th class="text-center ">Tipo</th>
-                                <th class="text-center ">Modalidad</th>
+                                <th class="d-none d-sm-block">Área</th>
+                                <th class="text-center d-none d-sm-block">Tipo</th>
+                                <th class="text-center d-none d-sm-block">Modalidad</th>
                                 <th class="text-center d-none d-sm-block">Imagen</th>
                                 <th class="text-center">Acciones</th>
                             </tr>
@@ -48,9 +48,9 @@
                             <tr>
                                 <td>{{ ++$i }}</td>
                                 <td>{{ $service->name }}</td>
-                                <td class="">{{ $service->area }}</td>
-                                <td class="text-center">{{ $service->type->type}}</td>
-                                <td class="text-center">{{ $service->modality->modality }}</td>
+                                <td class="d-none d-sm-block">{{ $service->area }}</td>
+                                <td class="text-center d-none d-sm-block">{{ $service->type->type}}</td>
+                                <td class="text-center d-none d-sm-block">{{ $service->modality->modality }}</td>
                                 <td class="text-center d-none d-sm-block"><img class="img-fluid" width="200"
                                         src="uploads/services/{{$service->url}}" alt=""></td>
                                 <td>

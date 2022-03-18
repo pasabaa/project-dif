@@ -43,10 +43,6 @@
                                 <th>ID</th>
 
                                 <th>Nombre</th>
-                                <th>Objetivo</th>
-                                <th>Dirigido a</th>
-                                <th>Requerimientos</th>
-                                <th>Télefono</th>
                                 <th>Responsable</th>
                                 <th class="text-center">Acciones</th>
                             </tr>
@@ -57,10 +53,6 @@
                                 <td>{{ ++$i }}</td>
 
                                 <td>{{ $family->name }}</td>
-                                <td>{!!nl2br(Str::limit($family->target, 100))!!}</td>
-                                <td>{!!nl2br(Str::limit($family->addressed, 100))!!}</td>
-                                <td>{!!nl2br(Str::limit($family->requirements, 100))!!}</td>
-                                <td>{{ $family->phone_number}}</td>
                                 <td>{{ $family->responsableFamily->name }}</td>
 
                                 <td>
