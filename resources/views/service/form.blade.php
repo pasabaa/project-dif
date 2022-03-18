@@ -1,6 +1,6 @@
         <div class="form-group">
-            {{ Form::label('name') }}
-            {{ Form::text('name', $service->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
+            {{ Form::label('Nombre') }}
+            {{ Form::text('name', $service->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
             {!! $errors->first('name', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group mt-4">
@@ -9,8 +9,8 @@
             {!! $errors->first('id_type', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group mt-4">
-            {{ Form::label('area') }}
-            {{ Form::text('area', $service->area, ['class' => 'form-control' . ($errors->has('area') ? ' is-invalid' : ''), 'placeholder' => 'Area']) }}
+            {{ Form::label('Área') }}
+            {{ Form::text('area', $service->area, ['class' => 'form-control' . ($errors->has('area') ? ' is-invalid' : ''), 'placeholder' => 'Área']) }}
             {!! $errors->first('area', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group mt-4">
@@ -19,8 +19,8 @@
             {!! $errors->first('id_modality', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group mt-4">
-            {{ Form::label('description') }}
-            {{ Form::textarea('description', $service->description, ['class' => 'form-control, summernote' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Description']) }}
+            {{ Form::label('Descripción') }}
+            {{ Form::textarea('description', $service->description, ['class' => 'form-control, summernote' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Descripción']) }}
             {!! $errors->first('description', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group mt-4">

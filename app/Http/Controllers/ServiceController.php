@@ -28,7 +28,7 @@ class ServiceController extends Controller
 
     public function index()
     {
-        $services = Service::paginate(8);
+        $services = Service::paginate(4);
         $title = "Servicios - DIF Acámbaro";
         return view('service.index', compact('services', 'title'))
             ->with('i', (request()->input('page', 1) - 1) * $services->perPage());
