@@ -75,7 +75,8 @@
                                     <div class="modal-content border-0">
                                         <div class="text-center p-2">
                                             <p class="fw-bolder m-0">¿Está seguro de querer <span
-                                                    class="text-danger">eliminar</span> esta noticia?</h1>
+                                                    class="text-danger">eliminar</span> esta modalidad?</p>
+                                            <p>Tenga en cuenta que se eliminarán todos los servicios asociados a esta modalidad.</p>
                                         </div>
                                         <div class="d-flex p-2 text-center justify-content-center gap-2">
                                             <button type="button" class="btn btn-sm btn-dark"
